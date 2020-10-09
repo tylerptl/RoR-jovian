@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Odin</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand d-flex " href="#">
+        <%= image_tag("system.bmp", class: "img-responsive", id: "navbar-logo", style: "max-height: 20px; max-width: 70px" ) %>
+        Jovian
+      </a>
+
+
+
+    </div>
+
+
+
+
+    <form class="form-inline">
+      <a class="btn btn-outline-primary" href="/login" role="button">
+        Login
+      </a>
+      <div style="padding-left: 10px;">
+        <a class="btn btn-outline-success" href="/signup" role="button">
+          Sign Up
+        </a>
+      </div>
+    </form>
+  </nav>
+    <%= yield %>
+
+  </body>
+</html>
